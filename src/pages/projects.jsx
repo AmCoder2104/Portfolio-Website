@@ -88,7 +88,7 @@ const projects = () => {
                     title="Muhammad Ameen Nazir" 
                     img={project1}
                     summary="I am developing a portfolio website using Next.js 14 to showcase my frontend development expertise. The site features an interactive interface highlighting my latest projects, including dynamic visuals and responsive design. It emphasizes performance and user experience across all devices. This portfolio demonstrates my skills and creativity in frontend development."
-                    link=""
+                    link="https://portfolio-website-beta-taupe.vercel.app/"
                     github=""
                     type='Porfolio'
 

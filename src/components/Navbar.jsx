@@ -127,7 +127,7 @@ const Navbar = () => {
               <GithubIcon />
             </motion.a>
             <span className="absolute left-1/2 transform -translate-x-1/2 translate-y-2 opacity-0 group-hover:opacity-100 bg-dark text-light dark:bg-light dark:text-dark text-xs rounded px-2 py-1 whitespace-nowrap transition-opacity">
-              Github
+              Githubs
             </span>
           </motion.div>
           <motion.div className="relative group w-7 mr-4">
