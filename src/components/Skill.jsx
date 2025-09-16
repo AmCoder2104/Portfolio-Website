@@ -1,51 +1,76 @@
-import React from 'react'
-import { motion } from 'framer-motion'
+"use client"
+import { motion } from "framer-motion"
 
 const Skill = ({ name, x, y }) => {
-    return (
-        <motion.div 
-            whileHover={{ scale: 1.05 }} 
-            initial={{ x: 0, y: 0 }}
-            whileInView={{ x: x, y: y, transition: { duration: 1.5 } }}
-            // transition={ duration: 1.5 }
-            viewport={{once: true}}
-            className='flex items-center justify-center rounded-full font-semibold bg-dark text-light dark:bg-light dark:text-dark px-6 py-3 shadow-dark dark:shadow-light cursor-pointer absolute lg:py-2 lg:px-4 md:text-sm md:py-1.5 md:px-3 xs:bg-transparent xs:dark:bg-transparent xs:text-dark xs:dark:text-light xs:font-bold'
-        >
-            {name}
-        </motion.div>
-    );
-};
+  return (
+    <motion.div
+      className="flex items-center justify-center rounded-full font-semibold bg-dark text-light py-3 px-6 shadow-dark cursor-pointer absolute dark:text-dark dark:bg-light lg:py-2 lg:px-4 md:text-sm md:py-1.5 md:px-3 sm:text-xs sm:py-1 sm:px-2"
+      whileHover={{ scale: 1.05 }}
+      initial={{ x: 0, y: 0 }}
+      whileInView={{ x: x, y: y, transition: { duration: 1.5 } }}
+      viewport={{ once: true }}
+    >
+      {name}
+    </motion.div>
+  )
+}
 
 const Skills = () => {
   return (
     <>
-      <h2 className='font-bold text-8xl mt-64 w-full text-center md:text-6xl md:mt-32'>Skills</h2>
-      <div className='w-full h-screen relative flex items-center justify-center rounded-full bg-circularLight dark:bg-circularDark
-      lg:h-[80vh] sm:lg-[60vh] xs:h-[50vh]
-      lg:bg-circularLightLg lg:dark:bg-circularDarkLg
-      md:bg-circularLightMd md:dark:bg-circularDarkMd
-      sm:bg-circularLightSm sm:dark:bg-circularDarkSm
-      '>
-        <motion.div whileHover={{scale:1.05}} className='flex items-center justify-center rounded-full font-semibold bg-dark text-light dark:bg-light dark:text-dark p-8 shadow-dark dark:shadow-light cursor-pointer lg:p-6 md:p-6 xs:text-xs xs:p-2'>
-            Web
+      <h2 className="font-bold text-8xl mt-64 w-full text-center md:text-6xl md:mt-32 sm:text-5xl sm:mt-24 xs:text-4xl xs:mt-16">
+        Skills
+      </h2>
+
+      <div className="w-full h-screen relative flex items-center justify-center rounded-full bg-circularLight dark:bg-circularDark lg:h-[80vh] sm:h-[60vh] xs:h-[50vh] lg:bg-circularLightLg lg:dark:bg-circularDarkLg md:bg-circularLightMd md:dark:bg-circularDarkMd sm:bg-circularLightSm sm:dark:bg-circularDarkSm xs:hidden">
+        <motion.div
+          className="flex items-center justify-center rounded-full font-semibold bg-dark text-light p-8 shadow-dark cursor-pointer dark:text-dark dark:bg-light lg:p-6 md:p-4 sm:p-3 xs:text-xs xs:p-2"
+          whileHover={{ scale: 1.05 }}
+        >
+          Web
         </motion.div>
 
-        <Skill name="HTML" x="-25vw" y="2vw"  />
-        <Skill name="CSS" x="-5vw" y="-10vw"  />
-        <Skill name="Javascript" x="20vw" y="6vw"  />
-        <Skill name="REACTJS" x="0vw" y="12vw"  />
-        <Skill name="NEXTJS" x="-20vw" y="-15vw"  />
-        <Skill name="NodeJS" x="15vw" y="-12vw"  />
-        <Skill name="ExpressJS" x="15vw" y="-12vw"  />
-        <Skill name="Web Design" x="32vw" y="-5vw"  />
-        <Skill name="MySQL" x="0vw" y="-20vw"  />
-        <Skill name="PostgresSQL" x="0vw" y="-20vw"  />
-        <Skill name="MONGODB" x="-25vw" y="18vw"  />
-        <Skill name="Tailwind CSS" x="18vw" y="18vw"  />
+        <Skill name="HTML" x="-20vw" y="2vw" />
+        <Skill name="CSS" x="-5vw" y="-8vw" />
+        <Skill name="Javascript" x="18vw" y="6vw" />
+        <Skill name="ReactJS" x="0vw" y="10vw" />
+        <Skill name="NextJS" x="-18vw" y="-12vw" />
+        <Skill name="Web Design" x="15vw" y="-10vw" />
+        <Skill name="Tailwind CSS" x="28vw" y="-5vw" />
+        <Skill name="MongoDB" x="0vw" y="-16vw" />
+        <Skill name="PostgreSQL" x="-22vw" y="15vw" />
+        <Skill name="Node.js" x="16vw" y="15vw" />
+      </div>
+
+      <div className="hidden xs:block w-full mt-8 px-4">
+        <div className="grid grid-cols-2 gap-3 w-full max-w-sm mx-auto">
+          {[
+            "Web Design",
+            "HTML",
+            "CSS",
+            "Javascript",
+            "ReactJS",
+            "NextJS",
+            "Tailwind CSS",
+            "MongoDB",
+            "PostgreSQL",
+            "Node.js",
+          ].map((skill, index) => (
+            <motion.div
+              key={skill}
+              className="flex items-center justify-center rounded-full font-semibold bg-dark text-light py-2 px-3 shadow-dark cursor-pointer dark:text-dark dark:bg-light text-xs text-center"
+              whileHover={{ scale: 1.05 }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0, transition: { duration: 0.5, delay: index * 0.1 } }}
+              viewport={{ once: true }}
+            >
+              {skill}
+            </motion.div>
+          ))}
+        </div>
       </div>
     </>
   )
 }
 
 export default Skills
-
