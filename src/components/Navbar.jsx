@@ -209,7 +209,7 @@ const Navbar = () => {
           </nav>
           <nav className="flex items-center justify-center flex-wrap mt-2">
             <motion.a
-              href={"https://www.linkedin.com/in/mudassar-ali-787971235/"}
+              href={""}
               target="_blank"
               whileHover={{ y: -2 }}
               whileTap={{ scale: 0.9 }}
@@ -218,7 +218,7 @@ const Navbar = () => {
               <LinkedInIcon />
             </motion.a>
             <motion.a
-              href={"https://github.com/codewithmudassar"}
+              href={""}
               target="_blank"
               whileHover={{ y: -2 }}
               whileTap={{ scale: 0.9 }}
@@ -227,7 +227,7 @@ const Navbar = () => {
               <GithubIcon />
             </motion.a>
             <motion.a
-              href={"https://www.upwork.com/freelancers/~010da425b07a99f22a"}
+              href={""}
               target="_blank"
               whileHover={{ y: -2 }}
               whileTap={{ scale: 0.9 }}
@@ -236,7 +236,7 @@ const Navbar = () => {
               <UpworkIcon />
             </motion.a>
             <motion.a
-              href={"https://www.fiverr.com/users/mudassar_ali222"}
+              href={""}
               target="_blank"
               whileHover={{ y: -2 }}
               whileTap={{ scale: 0.9 }}
