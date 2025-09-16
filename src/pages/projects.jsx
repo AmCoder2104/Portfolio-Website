@@ -4,10 +4,10 @@ import Head from 'next/head'
 import Link from 'next/link'
 import Image from 'next/image'
 import React from 'react'
-import project1 from "../../public/images/projects/P2.png"
-import project2 from "../../public/images/projects/P1.png"
-import project3 from "../../public/images/projects/P3.png"
-import project4 from "../../public/images/projects/P4.png"
+import project1 from "../../public/images/projects/quiz-app2.png"
+import project2 from "../../public/images/projects/blog-app.png"
+import project3 from "../../public/images/projects/medify.png"
+import project4 from "../../public/images/projects/edu.png"
 import { GithubIcon } from '@/components/icon'
 import { motion } from 'framer-motion'
 import TransitionEffect from '@/components/TransitionEffect'
@@ -85,45 +85,43 @@ const projects = () => {
             <div className='grid grid-cols-12 gap-24 gap-y-32 xl:gap-x-16 lg:gap-x-8 md:gap-y-24 sm:gap-x-0 '>
                 <div className='col-span-12 '>
                     <FeaturedProjects
-                    title="Muhammad Ameen Nazir" 
+                    title="Edify Testing System" 
                     img={project1}
-                    summary="I am developing a portfolio website using Next.js 14 to showcase my frontend development expertise. The site features an interactive interface highlighting my latest projects, including dynamic visuals and responsive design. It emphasizes performance and user experience across all devices. This portfolio demonstrates my skills and creativity in frontend development."
-                    link="https://portfolio-website-beta-taupe.vercel.app/"
+                    summary="Edify is a secure online assessment platform that enables organizations to conduct professional skill evaluations and certifications. The system features multi-role user management with Google OAuth, allowing administrators to create customizable tests with advanced anti-cheating security, automated scoring, and comprehensive analytics. Built with Next.js and MongoDB, it provides real-time monitoring, question bank management, detailed reporting with PDF/CSV exports, and a responsive interface optimized for seamless certification programs at scale."
+                    link="https://edify-testing-system.vercel.app/"
                     github=""
-                    type='Porfolio'
+                    type='Quiz-Application'
 
                     />
                 </div>
                 <div className='col-span-6 sm:col-span-12 '>
                 <Project
-                    title="Scorpify-Your-Gateway-to-sound" 
+                    title="Edify-Softech" 
                     img={project2}
-                    summary='Scorpify is an innovative web application that transforms your music listening experience, inspired by popular platforms like Spotify. What sets Scorpify apart is its fully responsive design, ensuring a seamless and enjoyable experience on any device, whether youre on a desktop, tablet, or smartphone.'
-                    link="https://scorpify-your-gateway-to-sound-6z24.vercel.app/"
+                    summary='Edify Softech is a modern blog management platform that enables users to create, edit, and publish content with comprehensive administrative controls.The system features full CRUD functionality for blog posts, an intuitive admin dashboard with real-time analytics (total contacts, blogs, and active users), and streamlined content management tools. Built with a responsive design and user-friendly interface, it provides an efficient solution for managing professional blogging websites with centralized administrative oversight and contact form management.'
+                    link="https://edify-softech.vercel.app/"
                     github="/"
-                    type='Music-project'
+                    type='Blog-Website'
                     />
                 </div>
                 <div className='col-span-6 sm:col-span-12'>
                 <Project
-                    title="Your-Own-Password-Manager" 
+                    title="Medify billing service" 
                     img={project3}
-                    summary='PassOP is a sleek React and Tailwind CSS password manager with snow animations and a GitHub profile button. It allows users to securely save, edit, delete, and copy passwords using Express.JS/MongoDB and clipboard functionality. Featuring React-Toastify for notifications and animated icons'
-                    link="https://pass-op-your-own-password-manager.vercel.app/"
+                    summary='Medify is a comprehensive medical services platform that connects patients with healthcare professionals and medical practices to establish patient-centered care.The system features an intuitive interface for accessing medical services, appointment scheduling, and healthcare management tools. Built with a clean, professional design and featuring promotional offerings like free trial services, Medify provides a streamlined solution for individuals seeking reliable healthcare services with verified customer satisfaction and easy-to-use digital healthcare management capabilities.'
+                    link="http://localhost:3001/"
                     github=""
-                    type='Pass-OP'
+                    type='Billing service'
                     />
                 </div>
                 <div className='col-span-6 sm:col-span-12'>
                 <Project
-                    title="Next.JS-PostgresSQL-Prisma(ORM)" 
+                    title="Edu-Mentor | Your AI Study Assistant " 
                     img={project4}
-                    summary='Functionality includes
-                    CRUD Operations 
-                    Authentication will be added soon'
-                    link=""
+                    summary='Edu Mentor is an AI-powered educational platform that serves as a comprehensive study assistant designed to accelerate student learning through personalized guidance.The system features intelligent study plan generation tailored to individual goals and learning styles, AI-curated educational resources for optimal content discovery, and advanced time management tools to help students stay organized and focused. Built with a clean, user-friendly interface and powered by artificial intelligence, Edu Mentor provides students with a streamlined solution for academic success through personalized learning experiences, smart resource recommendations, and effective study scheduling capabilities.'
+                    link="http://localhost:3000/home"
                     github=""
-                    type='Todo-List'
+                    type='Study-Planner | AI'
                     />
                 </div>
             </div>
